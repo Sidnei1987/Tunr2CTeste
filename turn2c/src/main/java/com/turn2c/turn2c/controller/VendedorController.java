@@ -15,36 +15,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import com.turn2c.turn2c.model.VendedorModel;
 import com.turn2c.turn2c.repository.VendedorRepository;
 
 @RestController
-@RequestMapping ("/vendedor")
+@RequestMapping("/vendedor")
 @CrossOrigin("*")
 public class VendedorController {
 
 	@Autowired
 	private VendedorRepository repository;
-	
+
 	@GetMapping
-	public ResponseEntity<List<VendedorModel>> GetAll(){
+	public ResponseEntity<List<VendedorModel>> GetAll() {
 		return ResponseEntity.ok(repository.findAll());
-	} 
-	
+	}
+
 	@PostMapping
-	public ResponseEntity<VendedorModel> Post(@RequestBody VendedorModel vendedor){
+	public ResponseEntity<VendedorModel> Post(@RequestBody VendedorModel vendedor) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(vendedor));
 	}
-	
+
 	@PutMapping
-	public ResponseEntity<VendedorModel> Put(@RequestBody VendedorModel vendedor){
+	public ResponseEntity<VendedorModel> Put(@RequestBody VendedorModel vendedor) {
 		return ResponseEntity.ok().body(repository.save(vendedor));
 	}
-	
-	@DeleteMapping ("/{Id}")
+
+	@DeleteMapping("/{Id}")
 	public void Delete(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
-	
+
 }

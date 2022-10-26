@@ -1,15 +1,23 @@
 package com.turn2c.turn2c.model;
 
+
+import java.util.Set;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
+
 @Entity
-@Table(name = "Vendedor")
+@Table(name = "vendedor")
 public class VendedorModel {
 	
 	@Id
@@ -19,13 +27,27 @@ public class VendedorModel {
 	@NotNull
 	@Size(min = 2, max = 100)
 	private String nomeVendedor;
+	
+	@OneToMany(mappedBy = "Vendedor")
+	Set<ClienteVendedorModel> registration;
+	
+	//@ManyToMany(mappedBy = "vendedores", cascade = CascadeType.ALL )
+	//private List<ClienteModel> cliente = new ArrayList<ClienteModel>();
+	
+	//public List<ClienteModel> getCliente() {
+	//	return cliente;
+	//}
 
-	public long getId() {
+	//public void setCliente(List<ClienteModel> cliente) {
+		//this.cliente = cliente;
+//	}
+
+	public long getIdVendedor() {
 		return idVendedor;
 	}
 
-	public void setId(long id) {
-		this.idVendedor = id;
+	public void setIdVendedor(long idVendedor) {
+		this.idVendedor = idVendedor;
 	}
 
 	public String getNomeVendedor() {
@@ -35,6 +57,10 @@ public class VendedorModel {
 	public void setNomeVendedor(String nomeVendedor) {
 		this.nomeVendedor = nomeVendedor;
 	}
+
+	
+
+
 	
 	
 

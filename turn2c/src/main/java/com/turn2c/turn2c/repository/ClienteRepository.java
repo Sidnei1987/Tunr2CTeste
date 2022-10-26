@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.turn2c.turn2c.model.ClienteModel;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<ClienteModel, Long>{
+public interface ClienteRepository extends JpaRepository<ClienteModel, Long> {
 
 }

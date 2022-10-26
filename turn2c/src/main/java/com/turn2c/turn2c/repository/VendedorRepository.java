@@ -7,7 +7,5 @@ import com.turn2c.turn2c.model.VendedorModel;
 
 @Repository
 public interface VendedorRepository extends JpaRepository<VendedorModel, Long> {
-	
-	
 
 }
