@@ -17,11 +17,11 @@ public class ClienteVendedorModel {
 	private long id;
 
 	@ManyToOne
-	@JoinColumn(name = "idVendedor") // student
+	@JoinColumn(name = "idVendedor") 
 	VendedorModel Vendedor;
 
 	@ManyToOne
-	@JoinColumn(name = "idCliente") // course
+	@JoinColumn(name = "idCliente") 
 	ClienteModel cliente;
 
 	public VendedorModel getVendedor() {
@@ -39,6 +39,15 @@ public class ClienteVendedorModel {
 	public void setCliente(ClienteModel cliente) {
 		this.cliente = cliente;
 	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setIdCV(long id) {
+		this.id = id;
+	}
+
 	// public LocalDateTime getRegisteredAt() {
 	// return registeredAt;
 	// }
@@ -51,13 +60,6 @@ public class ClienteVendedorModel {
 
 //	private List<VendedorModel> vendedores = new ArrayList<VendedorModel>();
 
-	public long getIdCV() {
-		return id;
-	}
-
-	public void setIdCV(long idCV) {
-		this.id = idCV;
-	}
 	// public List<ClienteModel> getClientes() {
 	// return clientes;
 //	}
