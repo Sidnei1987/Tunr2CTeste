@@ -41,11 +41,10 @@ public class ClienteVendedorController {
 	public ResponseEntity<ClienteVendedorModel> Put(@RequestBody ClienteVendedorModel cliente) {
 		return ResponseEntity.ok().body(repository.save(cliente));
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public void Delete(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
-
 
 }
