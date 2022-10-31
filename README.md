@@ -30,31 +30,40 @@ Projeto back-end responsavel por criar um CRUD para vendedor,cliente e estabelec
   Ultilize o postman
   
     Para listar os vendedor curl --location --request GET 'http://localhost:8080/vendedor' \
---data-raw ''
+    --data-raw ''
+
     Para criar os vendedor curl --location --request POST 'http://localhost:8080/vendedor' \
---data-raw ''
+    --data-raw ''
+
     para atualizar os vendedor curl --location --request PUT 'http://localhost:8080/vendedor' \
---data-raw ''
+    --data-raw ''
+
     para deletar o vendedor (passe o id que deseja excluir depois "vendedor/") => curl --location --request DELETE 'http://localhost:8080/vendedor' \
---data-raw '' 
+    --data-raw '' 
 
- Para listar os cliente curl --location --request GET 'http://localhost:8080/cliente' \
---data-raw ''
+    Para listar os cliente curl --location --request GET 'http://localhost:8080/cliente' \
+    --data-raw ''
+
     Para criar os cliente curl --location --request POST 'http://localhost:8080/cliente' \
---data-raw ''
-    para atualizar os cliente curl --location --request PUT 'http://localhost:8080/cliente' \
---data-raw ''
-    para deletar o cliente (passe o id que deseja excluir depois "cliente/") => curl --location --request DELETE 'http://localhost:8080/cliente' \
---data-raw '' 
+    --data-raw ''
 
-Para listar os cliente_vendedor curl --location --request GET 'http://localhost:8080/cliente_vendedor' \
---data-raw ''
+    Para atualizar os cliente curl --location --request PUT 'http://localhost:8080/cliente' \
+    --data-raw ''
+    
+    Para deletar o cliente (passe o id que deseja excluir depois "cliente/") => curl --location --request DELETE 'http://localhost:8080/cliente' \
+    --data-raw '' 
+
+    Para listar os cliente_vendedor curl --location --request GET 'http://localhost:8080/cliente_vendedor' \
+    --data-raw ''
+    
     Para criar os cliente_vendedor curl --location --request POST 'http://localhost:8080/cliente_vendedor' \
---data-raw ''
+    --data-raw ''
+    
     para atualizar os cliente_vendedor curl --location --request PUT 'http://localhost:8080/cliente_vendedor' \
---data-raw ''
+    --data-raw ''
+    
     para deletar o cliente_vendedor (passe o id que deseja excluir depois "cliente_vendedor/") => curl --location --request DELETE 'http://localhost:8080/cliente_vendedor' \
---data-raw '' 
+    --data-raw '' 
 
 ### OBSEVAÇÃO
   Para excluir vendedor e cliente eles não podem estar relacionados, deverá excluir primeiro eles da tabela cliente_vendedor.
